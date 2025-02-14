@@ -16,7 +16,7 @@ export default function FinalTicket() {
     const handleDownload = () => {
         const ticket = document.getElementById('ticket-details');
         if (ticket) {
-            html2canvas(ticket, { backgroundColor: null }).then((canvas) => {
+            html2canvas(ticket, { backgroundColor: 'white' }).then((canvas) => {
                 const link = document.createElement('a');
                 link.href = canvas.toDataURL('image/png');
                 link.download = 'conference_ticket.png';
